@@ -1,0 +1,25 @@
+{% macro displaySourceList(source_list) %}
+
+{% for source_row in source_list |batch(3)%}
+<div class="row" >
+    {% for sources in source_row %}
+    <div class="col-md-6">
+
+        <div class="panel panel-default" style="background: rgba(153, 243, 221, 0.2)">
+            <div class="panel-heading">
+                <a href="/sources/{{sources.id}}" style="font-weight: bolder; font-size:20px;">
+                    {{ sources.name}}
+                </a>
+            </div>
+            <div class="panel-body">
+                <p style="color: white;">
+                    {{ sources.description |truncate(170)}}
+                </p>
+                <a href="/sources/{{sources.id}}" class="btn btn-sm btn-danger">Visit {{sources.name}}</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endfor %}
+{% endmacro %}
