@@ -1,0 +1,49 @@
+{% extends 'base.html'%}
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    {% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    {% endblock %}
+</head>
+
+<body>
+    {% block content%}
+    <div id="overlay">
+        <div class="container" style="padding-top:4%;margin-top: 2em;">
+            <!-- Popular movie section  -->
+            <h3 class="text-center" style="font-weight: 700; color:white; font-size:20pt">Headlines</h3>
+            
+            {% for article_row in articles | batch(3)%}
+            <div class="row">
+                {% for article in article_row %}
+                <div class="col-md-12">
+                    <div class="thumbnail">
+                        <a href="{{article.url}}" target="_blank">
+                            <img src="{{article.image}}" alt="{{article.title}}" class="img-responsive"
+                                styles="height:30px">
+                        </a>
+                        <div class="caption">
+                            <h4><a href="{{article.url}}" target="_blank">{{article.title |truncate(35)}}</a></h4>
+                            <p>{{article.description | truncate(60)}}</p>
+                            <a href="{{article.url}}" target="_blank"> Read More</a>
+                        </div>
+                        <div class="caption">
+                            <div class="footer">
+                                <p> Published on: {{article.date}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {%endblock%}
+</body>
+
+</html>
