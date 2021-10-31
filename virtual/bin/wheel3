@@ -1,4 +1,4 @@
-#!/home/moringa/Desktop/newsbulletin/virtual/bin/python
+#!/home/moringa/Desktop/newsbulletin/flask/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
