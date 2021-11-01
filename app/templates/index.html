@@ -1,70 +1,52 @@
 {% extends 'base.html'%}
 {% import 'macros.html' as macro%}
 
-<!-- block styles -->
-{% block styles%}
-<style>
-    .row{
-        margin-bottom: 4vh;
-    }
-</style>
-{{ super() }}
-<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}" />
-<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-{% endblock %}
+<!Doctype html>
+<html>
 
-<!-- block content -->
-{% block content%}
-<div class="container">
-<div>
-    <div class="text-center pt-5">
-        <span class="text-success fs-1"><strong>WORLD NEWS</strong></span>
-    </div>
-    <br><br>
-    <h3 class="text-center d-1 pt-5 pb-5">Get your favorite news articles from different sources below.</h3>
+<head>
+    <meta charset="utf-8">
+    {% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="shortcut icon" href="#">
 
-</div>
-    <div class="row">
-        <div id="sports">
-            <div class="bg-info text-center p-1">
-                <h3>Sports</h3>
-            </div><br><br>
-            {{ macro.displaySourceList(sports)}}
-        </div>
+    {% endblock %}
+</head>
 
-    </div>
-    <div class="row">
-        <div id="technology">
-            <div class="bg-info text-center p-1">
-                <h3>Technology</h3>
-            </div><br><br>
-            {{ macro.displaySourceList(technology)}}
-        </div>
-    </div>
-    <div class="row">
-        <div id="entertainment">
-            <div class="bg-info text-center p-1">
-                <h3>Entertainment</h3>
-            </div><br><br>
-            {{ macro.displaySourceList(entertainment)}}
+<body>
+    {% block content%}
+    <div id="cards">
+        <div class="container text-center "style="border:15px solid white;">
+            <h4 class="text-center" style="font-weight: 700; font-size:35pt; color:white; padding-top:2em;">NEWS BULLETIN</h4>
+            <h3 style="font-weight: bold; color:white; font-size:20pt; margin: auto;">Entertainment</h3>
+            <hr>
+
+            {{ macro.displaySourceList(entertainment_sources)}}
+
+            <h3 style="font-weight: 700; color:white; font-size:20pt; margin: auto;">Technology</h3>
+            <hr>
+
+            {{ macro.displaySourceList(technology_sources)}}
+
+            
+
+            <h3 style="font-weight: 700; color:white; font-size:20pt; margin: auto;">Sports</h3>
+            <hr>
+
+            {{ macro.displaySourceList(sports_sources)}}
+
+            <h3 style="font-weight: 700; color:white; font-size:20pt; color: red;width: 350px;margin: auto;">Business</h3>
+            <hr>
+
+            {{ macro.displaySourceList(sources)}}
+
         </div>
     </div>
-    <div class="row">
-     
-        <div id="business">
-            <div class="bg-info text-center p-1">
-                <h3>Business</h3>
-            </div><br><br>
-            {{ macro.displaySourceList(business)}}
-        </div>
-    </div>
-</div>
 
-<br><br><br>
-<div class="bg-secondary">
-    {% block footer %}
-        <footer class="text-center text-light fs-1 pt-4 pb-4">&copy; 2021 World News</footer>
-    {% endblock footer %}
-</div>
 
-{%endblock%}
+    {%endblock%}
+
+</body>
+
+</html>

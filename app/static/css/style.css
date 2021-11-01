@@ -1,26 +1,15 @@
-body {
-    margin: 0px;
-    padding: 0px;
-    background-color: rgb(69, 54, 54);
+
+
+#cards {
+    padding-bottom: 1%;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    background: rgb(192, 183, 183);
 }
-* {
-    box-sizing: border-box;
-}
-ul {
-    list-style: none;
-}
-a {
-    text-decoration: none;
-}
-nav {
-    min-height: 60px;
-    width: 100%;
+
+
+.navbar {
     background-color: red;
-    border-top: 1px solid black !important;
-    position: absolute;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-flow: row wrap;
 }
+
