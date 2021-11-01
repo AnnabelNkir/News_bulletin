@@ -1,5 +1,5 @@
 import unittest
-from app.models import Articles
+from app.models import Article
 
 
 
@@ -8,11 +8,11 @@ class ArticleTest(unittest.TestCase):
     Test class to test articles
     '''
     def setUp(self):
-        self.new_article = Articles(
+        self.new_article = Article(
             1234, 'Karls Aden', 'mytitle', 'mydescription', 'url','myimage','datecreated')
 
     def test_instance(self):
-        self.assertTrue(isinstance(self.new_article, Articles))
+        self.assertTrue(isinstance(self.new_article, Article))
 
     def test_to_check_instance_variables(self):
         self.assertEquals(self.new_article.id,1234)
