@@ -1,3 +1,6 @@
+![n1](https://user-images.githubusercontent.com/87479148/139831912-de82f164-cba7-4d50-8978-ec14805731e8.png)
+![n2](https://user-images.githubusercontent.com/87479148/139831949-ee82978c-afb2-417f-84b6-0c1617ea46a2.png)
+![n3](https://user-images.githubusercontent.com/87479148/139832019-0bc556f2-5651-43ab-800d-735366ac327c.png)
 # News_bulletin
 A flask application that helps list and preview news articles from various sources. 
 
