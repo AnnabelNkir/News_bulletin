@@ -48,6 +48,7 @@ Step 4 : Download the all dependencies in the requirements.txt using pip install
 .Bootstrap
 .Python 3.8
 .Heroku
+.News API
 ```
 
 ## Known Bugs
