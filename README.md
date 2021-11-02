@@ -22,9 +22,11 @@ To view the app, open the live site link provided below on the README. Here is a
 Step 1 : Clone this repository using git clone https://github.com/collinsmuriuki/flask-movie-app.git, or downloading a ZIP file of the code.
 Step 2 : The repository, if downloaded as a .zip file will need to be extracted to your preferred location and opened
 Step 3 : Go to the project root directory and install the virtualenv library using pip an afterwards create a virtual environment. Run the following commands respectively:
+
  + pip install virtualenv
  + virtualenv virtual
  + source virtual/bin/activate
+ 
 Note that you can exit the virtual environment by running the command deactivate
 Step 4 : Download the all dependencies in the requirements.txt using pip install -r requirements.txt
 ```
