@@ -22,7 +22,7 @@ Step 3 : Open the terminal, go to the project directory and run the following co
 
 To view the app, open the live site link provided below on the README. Here is a run through of how to set up the application:
 
-Step 1 : Clone this repository using git clone https://github.com/collinsmuriuki/flask-movie-app.git, or downloading a ZIP file of the code.
+Step 1 : Clone this repository using git clone https://github.com/AnnabelNkir/News_bulletin.git, or downloading a ZIP file of the code.
 Step 2 : The repository, if downloaded as a .zip file will need to be extracted to your preferred location and opened
 Step 3 : Go to the project root directory and install the virtualenv library using pip an afterwards create a virtual environment. Run the following commands respectively:
 
